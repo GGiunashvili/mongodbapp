@@ -28,28 +28,30 @@ export default async function TopicsList() {
   // Ensure that topics is always an array, even if the fetch failed
   return (
     <>
-      {topics?.length > 0 ? (
-        topics.map((t) => (
-          <div
-            key={t._id}
-            className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"
-          >
-            <div>
-              <h2 className="font-bold text-2xl">{t.title}</h2>
-              <div>{t.description}</div>
-            </div>
+      <div className=" grid-cols-8 col-span-8">
+        {topics?.length > 0 ? (
+          topics.map((t) => (
+            <div
+              key={t._id}
+              className="col-span-2 p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"
+            >
+              <div>
+                <h2 className="font-bold text-2xl">{t.title}</h2>
+                <div>{t.description}</div>
+              </div>
 
-            <div className="flex gap-2">
-              <RemoveBtn id={t._id} />
-              <Link href={`/editTopic/${t._id}`}>
-                <HiPencilAlt size={24} />
-              </Link>
+              <div className="flex gap-2">
+                <RemoveBtn id={t._id} />
+                <Link href={`/editTopic/${t._id}`}>
+                  <HiPencilAlt size={24} />
+                </Link>
+              </div>
             </div>
-          </div>
-        ))
-      ) : (
-        <div>No topics available</div>
-      )}
+          ))
+        ) : (
+          <div>No topics available</div>
+        )}
+      </div>
     </>
   );
 }
