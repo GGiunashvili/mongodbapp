@@ -34,7 +34,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="col-span-4 p-[50px]">
+    <div className="col-span-4 ">
       <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400">
         <h1 className="text-xl font-bold my-4">Login</h1>
 

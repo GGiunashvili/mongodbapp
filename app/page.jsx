@@ -9,10 +9,10 @@ export default async function Home() {
   if (session) redirect("/dashboard");
   return (
     <>
-      <p>Name: {session?.user?.name || "Not logged in"}</p>
+      {/* <p>Name: {session?.user?.name || "Not logged in"}</p> */}
       <div className="grid grid-cols-12">
         <LoginForm />
-        <TopicsList />
+        {/* <TopicsList /> */}
       </div>
     </>
   );
