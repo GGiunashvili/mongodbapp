@@ -1,5 +1,5 @@
-import { aconnectMongoDB } from "@/libs/amongodb";
-import User from "@/models/user";
+import { aconnectMongoDB } from "../../../libs/amongodb";
+import User from "../../../models/User";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 

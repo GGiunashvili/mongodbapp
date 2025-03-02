@@ -1,5 +1,4 @@
-import TopicsList from "@/components/TopicsList";
-import LoginForm from "@/components/LoginForm";
+import LoginForm from "../components/LoginForm";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "./api/auth/[...nextauth]/route";
@@ -9,10 +8,8 @@ export default async function Home() {
   if (session) redirect("/profile");
   return (
     <>
-      {/* <p>Name: {session?.user?.name || "Not logged in"}</p> */}
       <div className="grid grid-cols-12">
         <LoginForm />
-        {/* <TopicsList /> */}
       </div>
     </>
   );
