@@ -5,7 +5,8 @@ import { HiPencilAlt } from "react-icons/hi";
 const getTopics = async () => {
   try {
     const res = await fetch(
-      process.env.TOPICS_API_URL || "http://localhost:3000/api/topics",
+      process.env.TOPICS_API_URL ||
+        "https://mongodbapp-dun.vercel.app/api/topics",
       {
         cache: "no-store",
       }
