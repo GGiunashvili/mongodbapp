@@ -27,7 +27,7 @@ export default function LoginForm() {
         return;
       }
 
-      router.replace("dashboard");
+      router.replace("profile");
     } catch (error) {
       console.log(error);
     }

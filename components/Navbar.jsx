@@ -6,7 +6,7 @@ export default function Navbar() {
       <Link className="text-white font-bold" href={"/"}>
         register
       </Link>
-      <Link className="text-white font-bold" href={"/dashboard"}>
+      <Link className="text-white font-bold" href={"/profile"}>
         profile
       </Link>
       <Link className="text-white font-bold" href={"/admin"}>
